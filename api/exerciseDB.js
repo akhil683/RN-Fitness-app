@@ -1,14 +1,14 @@
 import axios from "axios";
 import { rapidApiKey } from "../constants";
 
-const baseURL = "https://exercisedb.p.rapidapi.com/exercises/bodyPart/back"
+const baseURL = "https://exercisedb.p.rapidapi.com"
 
-const apiCall = async (url, params) => {
+const apiCall = async (url) => {
    try {
       const options = {
          method: 'GET',
          url,
-         params,
+         params: {limit: '10'},
          headers: {
             'X-RapidAPI-Key': rapidApiKey,
             'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
@@ -16,7 +16,6 @@ const apiCall = async (url, params) => {
       }
       const response = await axios.request(options)
       return response.data;
-
    } catch (e) {
       console.log("error: " + e)
    }

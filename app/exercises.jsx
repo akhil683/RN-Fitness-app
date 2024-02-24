@@ -12,14 +12,14 @@ export default function Exercises() {
    const item = useLocalSearchParams()   
    const [ exercises, setExercises ] = useState([])
 
-   useEffect(() => {
-      if(item) getExercises(item.name)
-   }, [item])
+   // useEffect(() => {
+   //    if(item) getExercises(item.name)
+   // }, [item])
 
-   const getExercises = async (bodyPart) => {
-      let data = await fetchExercisesByBodypart(bodyPart)
-      setExercises(data)
-   }
+   // const getExercises = async (bodyPart) => {
+   //    let data = await fetchExercisesByBodypart(bodyPart)
+   //    setExercises(data)
+   // }
 
    return (
       <ScrollView>

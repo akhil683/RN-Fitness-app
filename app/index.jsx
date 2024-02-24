@@ -11,7 +11,7 @@ export default function index() {
 
   return (
 
-    <View style={{height: hp(100)}} className=" bg-red-600 flex justify-end">
+    <View className=" bg-red-600 flex justify-end">
       <StatusBar style="light" />
       <Image className="h-full w-full absolute" source={require("../assets/images/welcome.jpg")} />
 
